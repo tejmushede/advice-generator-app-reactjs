@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body{
+  font-family: "Manrope", sans-serif;
+  //font-style: normal;
+  background-color: var(--dark-blue);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advice-container{
+  width: 310px;
+  background-color: var(--dark-grayish-blue);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 0px 8px;
+}
+
+.advice-container h1{
+  color: var(--neon-green);
+  text-align: center;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin-top: 30px;
+}
+
+.advice-container p{
+  color: var(--light-cyan);
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  line-height: 120%;
+  margin: 18px 20px 0px;
+}
+
+.divider{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.divider-mobile{
+  width: 80%;
+}
+
+.divider-desktop{
+  display: none;
+}
+
+.dice-button button{
+  width: 40px;
+  height: 40px;
+  background-color: var(--neon-green);
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  top: 20px;
+  cursor: pointer;
+}
+
+.dice-button button:hover{
+  box-shadow: 0px 0px 20px hsl(150, 100%, 66%);
+}
+
+.dice-icon{
+  width: 15px;
+  height: 15px;
+  display: block;
+  margin: auto;
+}
+
+@media (min-width: 768px){
+  .advice-container{
+    width: 400px;
+    border-radius: 10px;
+  }
+
+  .advice-container h1{
+    letter-spacing: 2.5px;
+  }
+
+  .advice-container p{
+    font-size: 22px;
+    line-height: normal;
+  }
+
+  .divider-mobile{
+    display: none;
+  }
+
+  .divider-desktop{
+    display: block;
+    width: 85%;
+    margin: 7px 0px;
+  }
+
+  .dice-button button{
+    width: 50px;
+    height: 50px;
+    top: 25px;
+  }
+  
+  .dice-icon{
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: auto;
+  }
+}
